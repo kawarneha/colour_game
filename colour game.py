@@ -1,19 +1,16 @@
 import tkinter
 import random
   
-colours = ['Red','Blue','Green','Pink','Black',
-           'Yellow','Orange','White','Purple','Brown'] #Colours which will going to be displayed
+colours = ['Red','Blue','Green','Pink','Black','Yellow','Orange','White','Purple','Brown'] #Colours which will going to be displayed
 score = 0
 timeleft = 30	    #Time remaining,total time will be 30 seconds  
-
 
 def startGame(event):
     
     if(timeleft == 30):
         countdown()
     nextColour()
-
-  
+    
 def nextColour():
     
     global score,timeleft
@@ -27,7 +24,6 @@ def nextColour():
         label.config(fg = str(colours[1]), text = str(colours[0]))
         scoreLabel.config(text = "Score: " + str(score))
 
-  
 def countdown():
     
     global timeleft
